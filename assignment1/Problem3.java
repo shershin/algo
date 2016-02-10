@@ -16,16 +16,24 @@ that A[i] + A[j] + A[k] = t, and no otherwise.
 		 for loop
 		 then if statement
 		 /*/
-		 int sum = 0;
-		 for (int i = 0; i < A.length; i++){
-			 sum += A[i];
-		 }
-		 if (sum == t){
-			 return true;
-		 } else {
+		 System.out.println(A.length);
+		 for (int i = 0; i < A.length - 1 ; i++){
+			 //check for the first number
+			 for (int j = 0; j < A.length - 1; j++){
+				 //check for the second number
+				 for(int k = 0; k < A.length - 1; k++){
+					 //check for the final number
+					 if ((A[i] + A[j] + A[k]) == t){
+						 //if there is 3 numbers that == t then return true
+						 //but if there isnt return false at the end of the forloops
+						 return true;
+					 }
+					 }
+				 }
+			 }
 			 return false;
 		 }
-	}
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,6 +47,13 @@ that A[i] + A[j] + A[k] = t, and no otherwise.
 		// Required: Please test your method with a different array and t, you can make up an array, and t
 
 		// Complete the code here.
+
+		//my own tester goes here i guess
+		int[] test = {0, 99, 1, -99, 2055, 5};
+		int sum = 100;
+
+		System.out.println("Return true if true " + checksum(test,sum));
+
 
 
 
