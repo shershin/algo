@@ -7,11 +7,20 @@ public class Problem4 {
 		//check each element of the arry agaisnt the first and put the smaller ones before it
 		//covert to an alist
 		//convert it back
-		int[] holder = A[];
-		for (int i = 1; i < A.length - 1; i++){
-			if (holder[i] < holder[0]){
-				A[i-1] = holder[i];
-
+		System.out.println(A.toString());
+		int[] arry = A;
+		int hold = A[0];
+		int start = 0;
+		int end = A.length - 1;
+		for (int i = 1; i < A.length; i++){
+			System.out.println(arry[i]);
+			if (arry[i] < hold){
+				A[start] = arry[i];
+				start++;
+				A[start] = hold;
+			} else {
+				A[end] = arry[i];
+				end--;
 			}
 		}
 	}
@@ -33,9 +42,8 @@ public class Problem4 {
 
 		partition(A);
 
-		System.out.println("After partition:");
+		System.out.println("\nAfter partition:");
 
-		System.out.println("Before partition:");
 		for(int i = 0; i < A.length; i++)
 		{
 			System.out.print(A[i] + " ");
