@@ -16,12 +16,12 @@ that A[i] + A[j] + A[k] = t, and no otherwise.
 		 for loop
 		 then if statement
 		 /*/
-		 System.out.println(A.length);
+
 		 for (int i = 0; i < A.length - 1 ; i++){
 			 //check for the first number
-			 for (int j = 0; j < A.length - 1; j++){
+			 for (int j = i + 1; j < A.length - 1; j++){
 				 //check for the second number
-				 for(int k = 0; k < A.length - 1; k++){
+				 for(int k = i + 2; k < A.length - 1; k++){
 					 //check for the final number
 					 if ((A[i] + A[j] + A[k]) == t){
 						 //if there is 3 numbers that == t then return true
@@ -52,7 +52,7 @@ that A[i] + A[j] + A[k] = t, and no otherwise.
 		int[] test = {0, 99, 1, -99, 2055, 5};
 		int sum = 100;
 
-		System.out.println("Return true if true " + checksum(test,sum));
+		System.out.println("There exist three indices i, j and k, such that A[i] + A[j] + A[k] = " + sum + " : " + checksum(test,sum));
 
 
 
