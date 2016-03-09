@@ -9,19 +9,7 @@ public class Problem3 {
 		//what i can do
 		//go threw each array and pull out the smallest element and then put it into the new array
 		//then do a recurrsive call to start over
-
-		int[] arry = new int[size];
-		int i = 0;
-		int arry1 = 0;
-		int arry2 = 0;
-		int arry3 = 0;
-
-		while (i <= size){
-			
-		}
-
-
-		return arry;
+		
 	}
 
 
