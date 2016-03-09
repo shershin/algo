@@ -11,7 +11,15 @@ public class Problem3 {
 		//then do a recurrsive call to start over
 
 		int[] arry = new int[size];
-		
+		int i = 0;
+		int arry1 = 0;
+		int arry2 = 0;
+		int arry3 = 0;
+
+		while (i <= size){
+			
+		}
+
 
 		return arry;
 	}
