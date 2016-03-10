@@ -9,7 +9,7 @@ public class Problem3 {
 		//what i can do
 		//go threw each array and pull out the smallest element and then put it into the new array
 		//then do a recurrsive call to start over
-		
+
 	}
 
 
@@ -28,10 +28,6 @@ public class Problem3 {
 		int size = l1.length + l2.length + l3.length;
 
 		mergeklists(l1,l2,l3,size);
-
-
-
-
 	}
 
 }
