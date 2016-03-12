@@ -7,9 +7,42 @@ public class Problem3 {
 	// Complete the code here.
 	public static int[] mergeklists(int[] l1, int[] l2, int[] l3, int size){
 		//what i can do
-		//go threw each array and pull out the smallest element and then put it into the new array
-		//then do a recurrsive call to start over
-
+		//put everything into one array using a for loop
+		//then bubble sort it
+		//BUBBLES
+		int[] arry = new int[size];
+		int temp = 0;
+		int i = 0;
+		while (temp < size){
+			if (i < l1.length-1){
+				arry[temp] = l1[i];
+				temp++;
+			}
+			if (i < l2.length-1){
+				arry[temp] = l2[i];
+				temp++;
+			}
+			if (i < l3.length-1){
+				arry[temp] = l3[i];
+				temp++;
+			}
+			i++;
+		}
+		//BUBBLES
+		boolean bubble = true;
+		int bub = 0;
+		while (bubble){
+			bubble = false;
+			for (int j = 0; j < size - 1; j++){
+				if (arry[j] > arry[j+1]){
+					bub = arry[j];
+					arry[j] = arry[j+1];
+					arry[j+1] = bub;
+					bubble = true;
+				}
+			}
+		}
+		return arry;
 	}
 
 
@@ -25,9 +58,13 @@ public class Problem3 {
 		// Required: Test your mergeklists() over l1, l2, l3,
 		// Complete the code here.
 
-		int size = l1.length + l2.length + l3.length;
+		int size = (l1.length -1) + (l2.length -1) + (l3.length -1);
 
-		mergeklists(l1,l2,l3,size);
+		int[] arry = 	mergeklists(l1,l2,l3,size);
+
+		for (int i = 0; i < size; i++){
+			System.out.println(arry[i]);
+		}
 	}
 
 }
