@@ -6,7 +6,7 @@ public class Problem3 {
 
 		int spot1 = 0;
 		int spot2 = 0;
-		int diff = 0;
+		double diff = 0;
 
 		for(int i = 0; i < A.length; i++){
 			int j = i + 1;
@@ -16,8 +16,10 @@ public class Problem3 {
 						spot1 = i;
 						spot2 = j;
 						diff = A[j] - A[i];
-					}
-
+            j++;
+					} else {
+            j++;
+          }
 				} else {
 					j++;
 				}
