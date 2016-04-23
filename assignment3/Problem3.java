@@ -10,20 +10,17 @@ public class Problem3 {
 
 		for(int i = 0; i < A.length; i++){
 			int j = i + 1;
-			if (j < A.length){
+			while (j < A.length){
 				if (A[i] < A[j]){
 					if(A[j] - A[i] > diff){
 						spot1 = i;
 						spot2 = j;
 						diff = A[j] - A[i];
-            j++;
-					} else {
-            j++;
-          }
-				} else {
-					j++;
-				}
-			}
+					}
+                }
+              j++;
+            }
+
 		}
 
 		return diff;
