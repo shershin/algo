@@ -12,9 +12,7 @@ public class Problem4 {
       for(int i = 0; i < s1.length; i++){
 				int j = 0;
         while (j < s2.length){
-					double test = s1[i] + s2[j];
-					System.out.println(s1[i] + " + " + s2[j] + " x " + x + " == " + test);
-          if (test == x){
+          if (s1[i] + s2[j] == x){
             return true;
           }else{
             j++;
