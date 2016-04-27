@@ -7,11 +7,14 @@ public class Problem4 {
 		// complete the checksum() method to find out
 		// if there exists a number from s1, and a number from s2
 		// such that, their sum is exactly x
-      int j = 0;
+
 
       for(int i = 0; i < s1.length; i++){
+				int j = 0;
         while (j < s2.length){
-          if (s1[i] + s2[j] = x){
+					double test = s1[i] + s2[j];
+					System.out.println(s1[i] + " + " + s2[j] + " x " + x + " == " + test);
+          if (test == x){
             return true;
           }else{
             j++;
